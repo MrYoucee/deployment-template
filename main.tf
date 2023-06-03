@@ -2,7 +2,7 @@ terraform {
   backend "gcs" {
     bucket         = "terraform-storage-789"
     prefix         = "terraform/state"
-    credentials    = file(var.service_account_key)
+    credentials    = var.service_account_key
   }
 }
 
