@@ -9,8 +9,6 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    env:
-      GCP_SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_SA_KEY }}
 
     steps:
       - name: Checkout Repository
@@ -28,7 +26,7 @@ jobs:
         run: 'gcloud info'
     
       - name: Initialize Terraform
-        run: terraform init -var "service_account_key=${GCP_SERVICE_ACCOUNT_KEY}" 
+        run: terraform init
 
       - name: Validate Terraform Configuration
         run: |
