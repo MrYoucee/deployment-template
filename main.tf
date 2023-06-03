@@ -2,9 +2,11 @@ terraform {
   backend "gcs" {
     bucket         = "terraform-storage-789"
     prefix         = "terraform/state"
-    credentials    = "$secrets.GCP_SA_KEY"
+    credentials    = file(var.service_account_key)
   }
 }
+
+variable "service_account_key" {}
 
 # google_client_config and kubernetes provider must be explicitly specified like the following.
 data "google_client_config" "default" {}
