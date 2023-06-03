@@ -24,9 +24,6 @@ jobs:
 
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
-        
-      - name: Setup Terraform
-        run: 'hashicorp/setup-terraform@v1'
     
       - name: Initialize Terraform
         run: terraform init
