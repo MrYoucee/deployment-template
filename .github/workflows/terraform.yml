@@ -42,6 +42,6 @@ jobs:
 
       - name: Terraform Apply
         run: |
-          terraform apply
+          terraform apply -auto-approve
         env:
           GOOGLE_CREDENTIALS: '${{ secrets.GCP_SA_KEY }}'
