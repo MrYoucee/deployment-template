@@ -15,7 +15,7 @@ module "gke" {
   region                     = "us-central1"
   zones                      = ["us-central1-a", "us-central1-b", "us-central1-f"]
   network                    = "default"
-  subnetwork                 = "us-central1"
+  subnetwork                 = "default"
   ip_range_pods              = "pod-range"
   ip_range_services          = "service-range"
   http_load_balancing        = false
