@@ -2,7 +2,7 @@ terraform {
   backend "gcs" {
     bucket         = "terraform-storage-789"
     prefix         = "terraform/state"
-    credentials    = "cb947d115383e83ac6fc1d058462697f33377639"
+    credentials    = "/Users/HP/Downloads/dev-env-789-cb947d115383.json"
   }
 }
 
