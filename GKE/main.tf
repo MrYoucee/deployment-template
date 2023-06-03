@@ -1,3 +1,11 @@
+terraform {
+  backend "gcs" {
+    bucket         = "terraform-storage-789"
+    prefix         = "terraform/state"
+    credentials    = "b47120c349cfcf8b377cf6eb454c4d1afa984707"
+  }
+}
+
 # google_client_config and kubernetes provider must be explicitly specified like the following.
 data "google_client_config" "default" {}
 
